@@ -18,6 +18,20 @@ import org.junit.Test;
             boolean result = valid.isValidFirstName("Ro");
             Assert.assertFalse(result);
         }
+
+        @Test
+        public void givenLastName_WhenProper_ShouldReturnTrue(){
+            UserValidation valid = new UserValidation();
+            boolean result = valid.isValidLastName("Mali");
+            Assert.assertTrue(result);
+        }
+
+        @Test
+        public void givenLastName_WhenNotProper_ShouldReturnFalse(){
+            UserValidation valid = new UserValidation();
+            boolean result = valid.isValidLastName("ma");
+            Assert.assertFalse(result);
+        }
     }
 
 
