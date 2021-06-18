@@ -62,16 +62,16 @@ import org.junit.Test;
         }
 
         @Test
-        public void givenPasswordShouldHaveAtLeastOne_UpperCase_ThenReturnTrue(){
+        public void givenPasswordShouldHaveAtLeastOne_SpecialCharacter_ThenReturnTrue(){
             UserValidation valid = new UserValidation();
-            boolean result = valid.isValidPassword("AbcdEfg8");
+            boolean result = valid.isValidPassword("A@cdEfg8");
             Assert.assertTrue(result);
         }
 
         @Test
-        public void givenPasswordShouldHaveAtLeastOne_UpperCase_OtherwiseReturnFalse(){
+        public void givenPasswordShouldHaveAtLeastOne_SpecialCharacter_OtherwiseReturnFalse(){
             UserValidation valid = new UserValidation();
-            boolean result = valid.isValidPassword("ABcdefghi");
+            boolean result = valid.isValidPassword("ABcdef123");
             Assert.assertFalse(result);
         }
 
