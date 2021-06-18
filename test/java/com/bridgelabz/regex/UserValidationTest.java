@@ -62,16 +62,16 @@ import org.junit.Test;
         }
 
         @Test
-        public void givenPasswordShouldContains_Minimum8Characters_ReturnTrue(){
+        public void givenPasswordShouldHaveAtLeastOne_UpperCase_ThenReturnTrue(){
             UserValidation valid = new UserValidation();
-            boolean result = valid.isValidPassword("12345678");
+            boolean result = valid.isValidPassword("A2345678");
             Assert.assertTrue(result);
         }
 
         @Test
-        public void givenPasswordShouldNotContains_Minimum8Characters_ReturnFalse(){
+        public void givenPasswordShouldHaveAtLeastOne_UpperCase_OtherwiseReturnFalse(){
             UserValidation valid = new UserValidation();
-            boolean result = valid.isValidPassword("1234567891234");
+            boolean result = valid.isValidPassword("12345678");
             Assert.assertFalse(result);
         }
 
