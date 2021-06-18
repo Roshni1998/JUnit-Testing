@@ -47,6 +47,19 @@ import org.junit.Test;
             Assert.assertFalse(result);
         }
 
+        @Test
+        public void givenMobileNo_WhenProper_ShouldReturnTrue(){
+            UserValidation valid = new UserValidation();
+            boolean result = valid.isValidMobileNo("91 9999888767");
+            Assert.assertTrue(result);
+        }
+
+        @Test
+        public void givenMoblieNo_WhenNotProper_ShouldReturnFalse(){
+            UserValidation valid = new UserValidation();
+            boolean result = valid.isValidMobileNo("919999888767");
+            Assert.assertFalse(result);
+        }
 
     }
 
