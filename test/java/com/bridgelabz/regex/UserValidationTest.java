@@ -32,6 +32,22 @@ import org.junit.Test;
             boolean result = valid.isValidLastName("ma");
             Assert.assertFalse(result);
         }
+
+        @Test
+        public void givenEmailId_WhenProper_ShouldReturnTrue(){
+            UserValidation valid = new UserValidation();
+            boolean result = valid.isValidEmailId("roshni1234@gmail.com");
+            Assert.assertTrue(result);
+        }
+
+        @Test
+        public void givenEmailId_WhenNotProper_ShouldReturnFalse(){
+            UserValidation valid = new UserValidation();
+            boolean result = valid.isValidEmailId("roshni1234@gmail.com.innnn");
+            Assert.assertFalse(result);
+        }
+
+
     }
 
 
