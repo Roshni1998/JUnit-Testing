@@ -55,9 +55,23 @@ import org.junit.Test;
         }
 
         @Test
-        public void givenMoblieNo_WhenNotProper_ShouldReturnFalse(){
+        public void givenMobileNo_WhenNotProper_ShouldReturnFalse(){
             UserValidation valid = new UserValidation();
             boolean result = valid.isValidMobileNo("919999888767");
+            Assert.assertFalse(result);
+        }
+
+        @Test
+        public void givenPasswordShouldContains_Minimum8Characters_ReturnTrue(){
+            UserValidation valid = new UserValidation();
+            boolean result = valid.isValidPassword("12345678");
+            Assert.assertTrue(result);
+        }
+
+        @Test
+        public void givenPasswordShouldNotContains_Minimum8Characters_ReturnFalse(){
+            UserValidation valid = new UserValidation();
+            boolean result = valid.isValidPassword("1234567891234");
             Assert.assertFalse(result);
         }
 
