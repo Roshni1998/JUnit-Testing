@@ -64,14 +64,14 @@ import org.junit.Test;
         @Test
         public void givenPasswordShouldHaveAtLeastOne_UpperCase_ThenReturnTrue(){
             UserValidation valid = new UserValidation();
-            boolean result = valid.isValidPassword("A2345678");
+            boolean result = valid.isValidPassword("AbcdEfg8");
             Assert.assertTrue(result);
         }
 
         @Test
         public void givenPasswordShouldHaveAtLeastOne_UpperCase_OtherwiseReturnFalse(){
             UserValidation valid = new UserValidation();
-            boolean result = valid.isValidPassword("12345678");
+            boolean result = valid.isValidPassword("ABcdefghi");
             Assert.assertFalse(result);
         }
 
